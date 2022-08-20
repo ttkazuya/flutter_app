@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../join.dart';
 
 class AuthPage extends StatelessWidget {
   AuthPage({Key? key}) : super(key: key);
@@ -18,7 +19,7 @@ class AuthPage extends StatelessWidget {
         children: <Widget>[
           Container(
             color: Colors.white,
-          ),
+           ),
           Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.end,
@@ -71,7 +72,8 @@ class AuthPage extends StatelessWidget {
               color: Colors.white,
             ),
           ),
-        ));
+        )
+    );
   }
 
   Widget _inputForm(Size size) {
@@ -117,9 +119,16 @@ class AuthPage extends StatelessWidget {
                   Container(
                     height: 8,
                   ),
-                  const Text("Forget Password"),
+                  Row(
+                  children: [
+                    Text("Forget Password"),
+                    Spacer(),
+                    Text("join Member")
+                  ]
+                ),
                 ],
-              )),
+              )
+          ),
         ),
       ),
     );
